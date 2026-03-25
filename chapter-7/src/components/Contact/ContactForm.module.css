@@ -1,0 +1,73 @@
+.inner {
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 640px) {
+  .inner {
+    max-width: 90%;
+  }
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+form .form {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .form label {
+  max-width: 170px;
+  width: 100%;
+  font-weight: 600;
+}
+form .form .formBox {
+  max-width: -70%;
+  width: 100%;
+}
+form .form input, form .form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #d1d5dc;
+  border-radius: 5px;
+}
+form .form + .form {
+  margin-top: 20px;
+}
+form .btnBox {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+form .btnBox .submitBtn {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 5px;
+  border: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+form .btnBox .clearBtn {
+  background-color: #ddd;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 5px;
+  border: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+form .error {
+  color: red;
+}
+textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+}

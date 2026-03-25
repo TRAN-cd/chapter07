@@ -1,0 +1,70 @@
+.inner {
+  padding: 10px;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 640px) {
+  .inner {
+    max-width: 90%;
+  }
+}
+
+.postBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .postBox {
+    flex-direction: column;
+  }
+}
+.postBox .postImg {
+  width: 100%;
+}
+.postBox .postImg img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.postBox .postTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+}
+@media only screen and (max-width: 640px) {
+  .postBox .postTextBox {
+    width: 100%;
+  }
+}
+.postBox .postTextBox > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.postBox .postTextBox > div ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.postBox .postTextBox > div ul li {
+  list-style: none;
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.postBox .postTextBox h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.postBox .postTextBox .txt {
+  font-size: 16px;
+}
+.postBox + .postBox {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}/*# sourceMappingURL=Post.module.css.map */
