@@ -1,5 +1,6 @@
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
+import type { ContactRequest } from "../../types/ContactRequest";
 
 type Form = {
   name: string,
@@ -61,11 +62,17 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
     try {
+      const requestBody: ContactRequest = {
+        name: form.name,
+        email: form.email,
+        message: form.message
+      }
+
       const response = await fetch(
         "https://1hmfpsvto6.execute-api.ap-northeast-1.amazonaws.com/dev/contacts", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
+          body: JSON.stringify(requestBody),
         });
 
       if (response.ok) {
