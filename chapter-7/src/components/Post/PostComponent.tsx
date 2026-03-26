@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from './PostComponent.module.css';
-
-type Post = {
-  id: string,
-  title: string,
-  thumbnailUrl: string,
-  createdAt: string,
-  categories: string[],
-  content: string
-}
+import type {Post} from "../../types/Post.types";
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
