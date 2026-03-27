@@ -62,11 +62,11 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
     try {
-      const requestBody: ContactRequest = {
-        name: form.name,
-        email: form.email,
-        message: form.message
-      }
+      // 分割代入でformから必要なデータだけを取り出す
+      const { name, email, message } = form;
+
+      //requestBodyをつくる　略記法をつかう
+      const requestBody: ContactRequest = { name, email, message }
 
       const response = await fetch(
         "https://1hmfpsvto6.execute-api.ap-northeast-1.amazonaws.com/dev/contacts", {
